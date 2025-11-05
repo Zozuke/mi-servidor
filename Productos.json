@@ -1,0 +1,5 @@
+[
+  { "id": 1, "nombre": "Camiseta", "precio": 150, "imagen": "https://via.placeholder.com/150" },
+  { "id": 2, "nombre": "Gorra", "precio": 80, "imagen": "https://via.placeholder.com/150" },
+  { "id": 3, "nombre": "Pantalón", "precio": 250, "imagen": "https://via.placeholder.com/150" }
+]
