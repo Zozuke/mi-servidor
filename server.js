@@ -7,6 +7,10 @@ const productos = require("./productos.json");
 app.use(express.static(path.join(__dirname, "public")));
 
 // Endpoint para obtener productos
+app.get("/api/productos", (req, res) => {
+  res.json(productos);
+});
+//esto le da el inicio 
 const path = require("path");
 
 app.use(express.static(path.join(__dirname, "public")));
