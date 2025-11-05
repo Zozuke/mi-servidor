@@ -1,10 +1,18 @@
 const express = require("express");
+const path = require("path");
 const app = express();
+const productos = require("./productos.json");
 
-app.get("/", (req, res) => {
-  res.send("Servidor funcionando correctamente 🚀");
+// Servir archivos estáticos (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, "public")));
+
+// Endpoint para obtener productos
+app.get("/api/productos", (req, res) => {
+  res.json(productos);
 });
 
-app.listen(3000, () => {
-  console.log("Servidor ejecutándose en http://localhost:3000");
+// Servidor
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Servidor funcionando en http://localhost:${port}`);
 });
