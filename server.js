@@ -4,11 +4,11 @@ const app = express();
 const productos = require("./productos.json");
 
 // Servir archivos estáticos (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 // Ruta raíz
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Endpoint para obtener productos
